@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import br.com.empresa.ControleDeBonificacoes;
+import br.com.empresa.Funcionario;
 import br.com.empresa.Gerente;
 
 public class testeGerente {
@@ -12,13 +14,12 @@ public class testeGerente {
 
 	@Test
 	public void nomeGerente() {
-		gerente = new Gerente("Luiz Gonzaga", "6988574-00", 2000, 4555,233);
+		gerente = new Gerente("Luiz Gonzaga");
 	}
 
 	@Test
 	public void bonificaçãoSalario(double salario){
-		gerente = new Gerente();
+		gerente = new Gerente(500, 0, 0);
 		salario = salario * 0.15
 		assertEquals(2300,0);
 	}
-}
